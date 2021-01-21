@@ -1,0 +1,10 @@
+<h1>Auto anzeigen</h1>
+<p>Produzent: <%= @car.producer_id %></p>
+<p>Modell: <%= @car.lh_model %></p>
+<p>Jahr: <%= @car.lh_year %></p>
+<p>Verbrauch/km: <%= @car.lh_usage.round(1) %></p>
+<p>Benzin l: <%= @car.lh_fuel.round(1) %></p>
+<p>Reichweite: <%= (@car.lh_fuel * @car.lh_usage).round(1) %></p><br>
+<%= link_to "Ändern" , edit_car_path(@car) %>
+<%= link_to "Löschen" , car_path(@car), method: :delete , data: { comfirm: "Bist du dir sicher?" } %>
+<%= link_to "Index" , root_path %>

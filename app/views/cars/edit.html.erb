@@ -1,0 +1,17 @@
+<h1>Auto ändern</h1>
+<%= form_for @car do |f| %>
+  <%= f.label :lh_model, "Modell" %>
+  <%= f.text_field :lh_model %><br>
+  <br>
+  <%= f.label :lh_year, "Jahr" %>
+  <%= f.text_field :lh_year %><br>
+  <br>
+  <%= f.label :lh_usage, "Verbrauch/100km" %>
+  <%= f.text_field :lh_usage %><br>
+  <br>
+  <%= f.label :lh_fuel, "Benzin l" %>
+  <%= f.text_field :lh_fuel %><br>
+  <br>
+  <%= f.submit "Speichern"%>
+<%= link_to "Abbrechen", root_path %>
+<% end %>

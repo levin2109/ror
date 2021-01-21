@@ -1,0 +1,23 @@
+<h1>Autos</h1>
+<table>
+  <tr>
+    <th>Hersteller</th>
+    <th>Modell</th>
+    <th>Jahr</th>
+    <th>Verbrauch/100km</th>
+    <th>Treibstoff l</th>
+    <th>Reichweite</th>
+  </tr>
+  <% @cars.each do |car| %>
+  <tr>
+      <th><%= car.producer_id %></th>
+      <th><%= car.lh_model %></th>
+      <th><%= car.lh_year %></th>
+      <th><%= car.lh_usage.round(1) %></th>
+      <th><%= car.lh_fuel.round(1) %></th>
+      <th><%= (car.lh_fuel * car.lh_usage).round(1) %></th>
+  </tr>
+  <br>
+<% end %>
+</table>
+<%= link_to "Auto erfassen", "cars/new" %>
